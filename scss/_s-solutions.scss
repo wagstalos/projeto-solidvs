@@ -55,9 +55,12 @@
 
     .flex-img {
         display: flex;
-        justify-content: space-between;
+        justify-content: start;
         width: 100%;
         margin-top: 150px;
+
+        flex-wrap: wrap;
+        gap: 40px;
     }
 
     &__img-bottom {
@@ -78,15 +81,23 @@
     }
 
     .img-1 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/pintura.webp);
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/pintura.png);
     }
 
     .img-2 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/imper.webp);
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/revestimentos.png);
     }
 
     .img-3 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/calhas.webp);
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/demolicao.png);
+    }
+
+     .img-4 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/drywall.png);
+    }
+
+    .img-5 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/alvenaria.png);
     }
 
     @include responsive($tablet) {
