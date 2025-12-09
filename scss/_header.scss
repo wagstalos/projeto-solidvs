@@ -6,11 +6,18 @@ header {
     height: 6rem;
     display: flex;
     z-index: 12;
+    transition: all 0.3s ease;
 
-    background-color: $brand-black;
     border-radius: 10px;
-    -webkit-box-shadow: 5px 1px 15px 2px rgba(0, 0, 0, 0.26);
-    box-shadow: 5px 1px 15px 2px rgba(0, 0, 0, 0.26);
+
+    background-color: transparent; // Inicialmente transparente
+    box-shadow: none; // Inicialmente sem sombra
+
+    &.scroll {
+        background-color: $brand-black;
+        -webkit-box-shadow: 5px 1px 15px 2px rgba(0, 0, 0, 0.26);
+        box-shadow: 5px 1px 15px 2px rgba(0, 0, 0, 0.26);
+    }
 
     
     .container {
