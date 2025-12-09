@@ -58,10 +58,26 @@
 .s-companys {
     overflow: hidden;
     background-color: #f8f8f8;
+    padding: 4rem 0;
 
     .marquee-content {
         display: flex;
-        justify-content: center;
+        // justify-content: center; // Removido para permitir o fluxo contínuo
         align-items: center;
+        width: max-content;
+        animation: marquee 20s linear infinite;
+
+        img {
+            margin: 0 3rem; // Espaçamento entre as logos
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); // Move metade da largura (assumindo que o conteúdo é duplicado)
     }
 }
