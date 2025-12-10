@@ -52,10 +52,13 @@ p {
     background-color: rgba(237, 158, 158, 0.164);
     padding: $gutter $gutter*2;
     border-radius: $border-radius*10;
+    display: table;
 }
 
 .title-section {
     font-weight: 600;
     font-size: 3.5rem;
     margin-top: $gutter*3;
+    color: $brand-black;
+    text-align: center;
 }
