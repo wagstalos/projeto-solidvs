@@ -106,6 +106,14 @@
         .text {
             width: 50%;
             margin: 50px;
+
+            svg {
+                background-color: #000000;
+                width: 45px;
+                height: 45px;
+                padding: 4px;
+                border-radius: 8px;
+            }
         }
 
         .img-obra {
@@ -149,10 +157,10 @@
     .btn-secondary {
         background-color: $brand-red;
         color: $white;
-        transition: all 0.3s ease-in;
+        // transition: all 0.3s ease-in;
 
         &:hover {
-            background-color: $brand-red;
+            background-color: $brand-main;
         }
     }
 
