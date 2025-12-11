@@ -5,6 +5,7 @@
         justify-content: space-evenly;
         margin-top: 40px;
         flex-wrap: wrap;
+
         div {
             width: 32%;
             text-align: left;
@@ -12,15 +13,16 @@
                 all 0.5s ease,
                 background-size 0.5s ease;
 
-             img {
-                    border-radius: 10px;
-                    
-                }
-            // &:hover {
-            //     transform: scale(1.07);
-            // }
+            img {
+                border-radius: 10px;
 
-            h4{
+            }
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            h4 {
                 color: $brand-red;
                 margin-bottom: $gutter;
                 margin-top: $gutter*4;
@@ -39,13 +41,19 @@
     @include responsive($tablet) {
         .d-flex {
             flex-direction: column;
+
             div {
                 width: 90%;
                 margin: 0 auto;
                 text-align: center;
+
                 img {
                     margin: 0 auto;
+                    height: 329px;
+                    width: 100%;
+                    object-fit: cover;
                 }
+
                 p {
                     margin-top: 10px;
                     margin-bottom: 40px;
@@ -77,7 +85,111 @@
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%); // Move metade da largura (assumindo que o conteúdo é duplicado)
+    }
+}
+
+.s-control {
+    // @include paddingSection(90px);
+    //    background-image: url("../img/50.webp");
+    //     background-size: cover;
+    //      background-position: center;
+    //      background-repeat: no-repeat;
+    margin: 100px;
+    border-radius: 20px;
+    background-color: $brand-black;
+    position: relative;
+
+    .d-flex {
+        .text {
+            width: 50%;
+            margin: 50px;
+        }
+
+        .img-obra {
+            width: 50%;
+            position: absolute;
+            right: 0;
+            top: -20%
+        }
+    }
+
+    h2 {
+        color: $white;
+        max-width: 85%;
+        font-weight: 400;
+        margin-top: 10px;
+        margin-bottom: 40px;
+
+        b {
+            color: $brand-red;
+        }
+    }
+
+    .btn-secondary {
+        background-color: $brand-red;
+        color: $white;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            background-color: $brand-red;
+        }
+    }
+
+    @include responsive(1224px) {
+        margin: 20px;
+
+        .d-flex {
+            flex-direction: column;
+
+            .img-obra {
+                top: 10%;
+            }
+        }
+    }
+
+    @include responsive($tablet) {
+        margin: 0;
+        border-radius: 0;
+        margin-bottom: 50px;
+
+        .d-flex {
+            flex-direction: column;
+
+            .text {
+                width: 100%;
+                margin: 50px 0;
+
+                svg {
+                    display: flex;
+                    margin: 0 auto;
+                }
+            }
+
+            .img-obra {
+                width: 80%;
+                position: relative;
+                top: 0;
+                margin: 0 auto;
+            }
+        }
+
+        h2 {
+            max-width: 100%;
+            font-size: 4rem;
+            text-align: center;
+            margin: 20px 50px 50px 50px;
+        }
+
+        .btn-secondary {
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 50px;
+            width: 80%;
+        }
     }
 }
