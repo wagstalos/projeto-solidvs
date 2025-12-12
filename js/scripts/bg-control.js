@@ -1,44 +1,41 @@
 // Bg Control Script
 function initBgControl() {
-  const bgGrid = document.querySelector(".s-control .bg-grid");
-  if (!bgGrid) return;
+  const bgGrids = document.querySelectorAll(".bg-grid");
+  if (bgGrids.length === 0) return;
 
-  function createGrid() {
-    bgGrid.innerHTML = "";
-    
-    // We want cells of approx 50x50, filling the container.
-    // However, flex wrap is easiest if we just generate enough divs.
-    
-    const width = bgGrid.offsetWidth;
-    const height = bgGrid.offsetHeight;
-    
-    const cellSize = 50; 
-    
-    const cols = Math.ceil(width / cellSize);
-    const rows = Math.ceil(height / cellSize);
-    const totalCells = cols * rows;
+  function createGrids() {
+    bgGrids.forEach(bgGrid => {
+        bgGrid.innerHTML = "";
+        
+        const width = bgGrid.offsetWidth;
+        const height = bgGrid.offsetHeight;
+        
+        const cellSize = 50; 
+        
+        const cols = Math.ceil(width / cellSize);
+        const rows = Math.ceil(height / cellSize);
+        const totalCells = cols * rows;
 
-    // Use a fragment for better performance
-    const fragment = document.createDocumentFragment();
+        // Use a fragment for better performance
+        const fragment = document.createDocumentFragment();
 
-    for (let i = 0; i < totalCells; i++) {
-      const cell = document.createElement("div");
-      cell.classList.add("bg-grid-cell");
-      // Optional: Add random fade out duration for more "alive" feel when mouse leaves?
-      // For now, simple standard hover as requested.
-      fragment.appendChild(cell);
-    }
-    
-    bgGrid.appendChild(fragment);
+        for (let i = 0; i < totalCells; i++) {
+        const cell = document.createElement("div");
+        cell.classList.add("bg-grid-cell");
+        fragment.appendChild(cell);
+        }
+        
+        bgGrid.appendChild(fragment);
+    });
   }
 
-  createGrid();
+  createGrids();
 
   // Re-calculate on resize
   let resizeTimeout;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(createGrid, 200);
+    resizeTimeout = setTimeout(createGrids, 200);
   });
 }
 

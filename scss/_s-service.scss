@@ -104,30 +104,7 @@
     overflow: hidden; // Ensure cells don't spill out if rounded corners
     cursor: url('../img/paint.svg'), auto;
 
-    .bg-grid {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        z-index: 0;
-    }
 
-    .bg-grid-cell {
-        width: 50px;
-        height: 50px;
-        border: 1px solid rgba(255, 255, 255, 0.02);
-        transition: background-color 1.5s ease; // Slow fade out for trail effect
-
-        &:hover {
-            background-color: $brand-red; // Or random color via JS? User said "quadrado mude de cor". One specific color or random? "um quadrado mude de cor no fundo".
-            transition: background-color 0s;
-            box-shadow: 0 0 10px $brand-red;
-            z-index: 1;
-        }
-    }
 
     .container {
         position: relative;

@@ -4,37 +4,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(18, 1fr);
-        grid-template-rows: repeat(9, 1fr); 
-        width: 100%;
-        height: 100%;
-        opacity: 0.1;
-    }
+    cursor: url('../img/paint.svg'), auto;
 
-    .grid::before,
-    .grid::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: repeating-linear-gradient(
-                to bottom,
-                transparent,
-                transparent calc(100% / 18 - 0.5px),
-                rgba(255, 255, 255, 0.3) calc(100% / 18)
-            ),
-            repeating-linear-gradient(
-                to right,
-                transparent,
-                transparent calc(100% / 18 - 0.5px),
-                rgba(255, 255, 255, 0.3) calc(100% / 18)
-            );
-        pointer-events: none; /* Linhas puramente visuais */
+    .container {
+        pointer-events: none; // Allow interaction with grid behind
     }
 
     &__text {
@@ -44,6 +19,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        pointer-events: auto; // Restore interactivity
 
         h1 {
             font-size: 56px;
@@ -83,14 +59,17 @@
             }
         }
     }
+
     @include responsive(1250px) {
         &__text {
             width: 80%;
         }
     }
+
     @include responsive($tablet) {
         &__text {
             width: 90%;
+
             h1 {
                 font-size: 36px;
                 color: $white;
@@ -100,8 +79,10 @@
 
     @include responsive($mobile) {
         height: 100dvh;
+
         &__text {
             width: 100%;
+
             h1 {
                 max-width: 90%;
                 font-size: 3rem;
@@ -109,12 +90,14 @@
 
                 margin: 0 auto;
             }
+
             p {
                 color: $white;
                 max-width: 90%;
                 font-size: 1.8rem;
             }
         }
+
         .btn-primary {
             justify-content: space-between;
             width: 70%;
