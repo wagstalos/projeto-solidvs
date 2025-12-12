@@ -101,11 +101,44 @@
     border-radius: 20px;
     background-color: $brand-black;
     position: relative;
+    overflow: hidden; // Ensure cells don't spill out if rounded corners
+
+    .bg-grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 0;
+    }
+
+    .bg-grid-cell {
+        width: 50px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.02);
+        transition: background-color 0s; // Instant change on hover? Or smooth? User said "mude de cor". Usually instant on hover is better for this effect.
+
+        &:hover {
+            background-color: $brand-red; // Or random color via JS? User said "quadrado mude de cor". One specific color or random? "um quadrado mude de cor no fundo".
+            transition: background-color 0s;
+            box-shadow: 0 0 10px $brand-red;
+            z-index: 1;
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+        pointer-events: none; // Allow clicks/hover to pass through to grid
+    }
 
     .d-flex {
         .text {
             width: 50%;
             margin: 50px;
+            pointer-events: auto; // Content should be interactive
 
             svg {
                 background-color: #161f29;
@@ -117,10 +150,15 @@
         }
 
         .img-obra {
-            width: 50%;
+            // width: 50%;
+            // position: absolute;
+            // right: 0;
+            // top: -20%;
+            pointer-events: auto; // Image should be interactive/blocking?
+            width: 58%;
             position: absolute;
-            right: 0;
-            top: -20%;
+            right: -145px;
+            top: -9%;
 
             img {
                 animation: float 6s ease-in-out infinite;
@@ -198,7 +236,7 @@
                 width: 80%;
                 position: relative;
                 top: 0;
-                margin: 0 auto;
+                left: 10%;
             }
         }
 
