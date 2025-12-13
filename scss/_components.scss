@@ -16,9 +16,9 @@
     transition: background-color 1.5s ease; // Slow fade out for trail effect
 
     &:hover {
-        background-color: $brand-red;
+        background-color: $brand-main;
         transition: background-color 0s; // Instant light up
-        box-shadow: 0 0 10px $brand-red;
+        box-shadow: 0 0 10px $brand-main;
         z-index: 1;
     }
 }

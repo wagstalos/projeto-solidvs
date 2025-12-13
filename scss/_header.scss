@@ -13,6 +13,25 @@ header {
     background-color: transparent; // Inicialmente transparente
     box-shadow: none; // Inicialmente sem sombra
 
+    .theme-switcher {
+        display: flex;
+        gap: 8px;
+        margin-left: 20px;
+
+        .theme-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s;
+            border: 2px solid $white;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
 
     &.scroll {
         background-color: $brand-black;

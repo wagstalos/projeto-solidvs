@@ -6,7 +6,7 @@
         padding-bottom: 40px; // Space for pagination
 
         .swiper-pagination-bullet {
-            background-color: $brand-red;
+            background-color: $brand-main;
         }
 
         .swiper-button-next,
@@ -37,7 +37,7 @@
             }
 
             h4 {
-                color: $brand-red;
+                color: $brand-main;
                 margin-bottom: $gutter;
                 margin-top: $gutter; // Reduced top margin from 4x to 1x for better balance
             }
@@ -178,12 +178,12 @@
         margin-bottom: 40px;
 
         b {
-            color: $brand-red;
+            color: $brand-main;
         }
     }
 
     .btn-secondary {
-        background-color: $brand-red;
+        background-color: $brand-main;
         color: $white;
         // transition: all 0.3s ease-in;
 

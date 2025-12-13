@@ -1,6 +1,17 @@
 AOS.init();
 
+function initThemeSwitcher() {
+  const dots = document.querySelectorAll('.theme-dot');
+  dots.forEach(dot => {
+    dot.addEventListener('click', function() {
+      const color = this.getAttribute('data-color');
+      document.documentElement.style.setProperty('--brand-main', color);
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+  initThemeSwitcher();
   const swiper = new Swiper(".s-feedback .swiper", {
     speed: 400,
     spaceBetween: 100,
