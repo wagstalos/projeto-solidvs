@@ -1,13 +1,15 @@
 .s-service {
     @include paddingSection(90px);
 
-    .d-flex {
-        justify-content: space-evenly;
+    .swiper-service {
         margin-top: 40px;
-        flex-wrap: wrap;
+        padding-bottom: 40px; // Space for pagination
 
-        div {
-            width: 32%;
+        .swiper-pagination-bullet {
+            background-color: $brand-red;
+        }
+
+        .swiper-slide {
             text-align: left;
             transition:
                 all 0.5s ease,
@@ -15,7 +17,9 @@
 
             img {
                 border-radius: 10px;
-
+                width: 100%; // Ensure image fills the slide
+                height: 300px; // Standardize height
+                object-fit: cover;
             }
 
             &:hover {
@@ -25,7 +29,7 @@
             h4 {
                 color: $brand-red;
                 margin-bottom: $gutter;
-                margin-top: $gutter*4;
+                margin-top: $gutter; // Reduced top margin from 4x to 1x for better balance
             }
 
 
@@ -39,19 +43,12 @@
     }
 
     @include responsive($tablet) {
-        .d-flex {
-            flex-direction: column;
-
-            div {
-                width: 90%;
-                margin: 0 auto;
+        .swiper-service {
+            .swiper-slide {
                 text-align: center;
 
                 img {
-                    margin: 0 auto;
                     height: 250px;
-                    width: 100%;
-                    object-fit: cover;
                 }
 
                 p {
