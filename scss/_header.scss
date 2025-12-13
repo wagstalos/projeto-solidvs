@@ -13,13 +13,16 @@ header {
     background-color: transparent; // Inicialmente transparente
     box-shadow: none; // Inicialmente sem sombra
 
+
     &.scroll {
         background-color: $brand-black;
         -webkit-box-shadow: 5px 1px 15px 2px rgba(0, 0, 0, 0.26);
         box-shadow: 5px 1px 15px 2px rgba(0, 0, 0, 0.26);
+        backdrop-filter: blur(20px);
+        background: rgba(25, 25, 25, .6);
     }
 
-    
+
     .container {
         max-width: 100%;
         @include flex(row, center, space-between);
@@ -27,7 +30,7 @@ header {
 
     .btn-secondary {
         padding: 1rem 2rem;
-        border:1px solid $brand-main;
+        border: 1px solid $brand-main;
         line-height: 0;
         color: $white;
     }
@@ -46,9 +49,11 @@ header {
                 img {
                     margin-left: 1.2rem;
                 }
+
                 &:not(:first-child) {
                     margin-left: 4.8rem;
                 }
+
                 a {
                     font-weight: 600;
                     font-size: 1.6rem;
@@ -56,6 +61,7 @@ header {
                     color: $white;
                     opacity: 0.9;
                     transition: color 0.3s;
+
                     &:hover {
                         color: $white;
                         opacity: 0.7;
@@ -83,6 +89,7 @@ header {
         height: 6rem;
         display: flex;
         align-items: center;
+
         nav {
             ul {
                 display: none;
@@ -92,6 +99,7 @@ header {
         .dots {
             display: block;
         }
+
         .btn-secondary {
             display: none;
         }
@@ -107,7 +115,7 @@ header {
 
     right: 0;
     bottom: 0;
-    z-index: 12;
+    z-index: 999;
     display: none;
 
     &::before {
@@ -124,6 +132,7 @@ header {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+
         svg {
             width: 24px;
             margin: 8px;
@@ -147,6 +156,7 @@ header {
             font-size: 2rem;
             margin: 24px 0;
             font-weight: 700;
+
             a {
                 color: $black;
             }

@@ -12,11 +12,7 @@
         .swiper-button-next,
         .swiper-button-prev {
             color: $white;
-            // border: 1px solid $brand-main;
 
-            // top: 50%; // Default is fine usually
-            // width: 44px;
-            // height: 44px;
             &::after {
                 font-size: 14px; // Adjust arrow size
                 font-weight: bold;
@@ -57,6 +53,11 @@
     }
 
     @include responsive($tablet) {
+        h3 {
+            line-height: 20px;
+            height: 40px;
+        }
+
         .swiper-service {
             .swiper-slide {
                 text-align: center;
