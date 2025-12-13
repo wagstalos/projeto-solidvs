@@ -17,11 +17,13 @@ h4 {
     font-size: 2rem;
     line-height: 112%;
 }
+
 h1,
 h2 {
     line-height: 112%;
     letter-spacing: -1px;
 }
+
 h3,
 h4 {
     font-weight: 500;
@@ -42,17 +44,20 @@ p {
     font-size: 1.8rem;
     line-height: 150%;
     color: rgb(103 100 100);
-        font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;
 }
+
 .subtitle {
-    color: $brand-red;
+    color: $brand-main;
     font-size: 1.4rem;
     font-weight: 500;
     margin: 0 auto;
-    background-color: rgba(237, 158, 158, 0.164);
+    // background-color: rgba(237, 158, 158, 0.164);
+    background-color: rgb(221 221 221 / 16%);
     padding: $gutter $gutter*2;
     border-radius: $border-radius*10;
     display: table;
+    font-weight: 600;
 }
 
 .title-section {

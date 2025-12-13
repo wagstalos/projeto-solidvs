@@ -116,7 +116,9 @@
     overflow: hidden; // Ensure cells don't spill out if rounded corners
     cursor: url('../img/paint.svg'), auto;
 
-
+    svg {
+        color: $brand-main;
+    }
 
     .container {
         position: relative;
