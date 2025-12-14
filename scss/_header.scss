@@ -82,8 +82,8 @@ header {
                     transition: color 0.3s;
 
                     &:hover {
-                        color: $white;
-                        opacity: 0.7;
+                        color: $brand-main;
+                        // opacity: 0.7;
                     }
                 }
             }
