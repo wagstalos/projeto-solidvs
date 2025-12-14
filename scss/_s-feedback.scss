@@ -5,7 +5,7 @@
         justify-content: space-around;
 
         h2 {
-            font-size: 74px;
+            font-size: 6rem;
             z-index: 10;
             position: relative;
             line-height: 69%;
@@ -78,7 +78,7 @@
                 text-align: center;
                 top: 20px;
                 width: 80%;
-                color: #fff;
+                color: $white;
                 margin: 0 auto;
             }
         }
