@@ -35,13 +35,12 @@
             b {
                 color: $brand-main;
                 font-weight: 600;
-                // background-color: $brand-main;
                 height: 5px;
             }
         }
 
         .btn-primary {
-            padding: 0.5rem 1rem 0.5rem 2.5rem;
+            padding: 0.5rem .5rem .5rem 2.5rem;
             display: inline-flex;
             width: 273px;
             justify-content: space-between;
@@ -104,21 +103,23 @@
                 font-size: 1.8rem;
                 text-align: left;
                 margin-bottom: 20px;
+                padding-right: 20px;
             }
         }
 
         .btn-primary {
             justify-content: space-between;
-            width: 90%;
-            font-size: 1.8rem;
+            width: 70%;
+            font-size: 1.6rem;
             margin-top: 30px;
             text-transform: uppercase;
+            align-items: center;
+            white-space: nowrap;
             font-weight: 600;
-
         }
     }
 
-    @include responsive(350px) {
+    @include responsive(400px) {
         &__text {
             h1 {
                 font-size: 3rem;
@@ -132,8 +133,15 @@
         }
 
         .btn-primary {
+            padding: .6rem;
             font-size: 1.6rem;
             margin-top: 10px;
+            justify-content: center;
+            font-size: 1.4rem;
+
+            svg {
+                display: none;
+            }
         }
     }
 }
