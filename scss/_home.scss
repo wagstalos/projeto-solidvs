@@ -31,7 +31,7 @@
             max-width: 70%;
             margin: 40px auto;
             font-size: 2.2rem;
-            
+
             b {
                 color: $brand-main;
                 font-weight: 600;
@@ -42,11 +42,10 @@
 
         .btn-primary {
             padding: 0.5rem 1rem 0.5rem 2.5rem;
-            display: -webkit-inline-box;
-            display: -ms-inline-flexbox;
             display: inline-flex;
             width: 273px;
             justify-content: space-between;
+            align-items: center;
 
             svg {
                 background-color: $white;
@@ -92,24 +91,49 @@
 
             h1 {
                 max-width: 90%;
-                font-size: 3rem;
+                font-size: 3.2rem;
                 color: $white;
+                margin-left: 20px;
 
-                margin: 0 auto;
+                text-align: left;
             }
 
             p {
-                color: $white;
+                color: $gray-100;
                 max-width: 90%;
                 font-size: 1.8rem;
+                text-align: left;
+                margin-bottom: 20px;
             }
         }
 
         .btn-primary {
             justify-content: space-between;
-            width: 85%;
+            width: 90%;
             font-size: 1.8rem;
             margin-top: 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+
+        }
+    }
+
+    @include responsive(350px) {
+        &__text {
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .btn-primary {
+            font-size: 1.6rem;
+            margin-top: 10px;
         }
     }
 }
