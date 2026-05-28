@@ -28,8 +28,8 @@
             img {
                 border-radius: 10px;
                 width: 100%; // Ensure image fills the slide
-                height: 300px; // Standardize height
-                object-fit: cover;
+                height: 400px; // Standardize height
+                object-fit: fill;
             }
 
             &:hover {

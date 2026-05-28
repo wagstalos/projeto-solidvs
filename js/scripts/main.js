@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesPerView: 2,
       },
       1200: {
-          slidesPerView: 3,
+          slidesPerView: 2,
       }
     }
   });

@@ -56,6 +56,39 @@
         }
     }
 
+    &__bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem 0;
+        background: rgba(0, 0, 0, 0.55);
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        pointer-events: auto;
+    }
+
+    &__services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.2rem 0;
+
+        li {
+            color: $gray-100;
+            font-size: 1.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 0 2.4rem;
+            border-right: 2px solid $brand-main;
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+
     @include responsive(1350px) {
         &__text {
             h1 {
@@ -84,6 +117,19 @@
 
     @include responsive($mobile) {
         height: 100dvh;
+
+        &__bottom {
+            padding: 1.6rem 0;
+        }
+
+        &__services {
+            gap: 1rem 0;
+
+            li {
+                font-size: 1.2rem;
+                padding: 0 1.2rem;
+            }
+        }
 
         &__text {
             width: 100%;
