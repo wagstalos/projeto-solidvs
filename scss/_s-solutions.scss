@@ -81,11 +81,11 @@
     }
 
     .img-1 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/pintura.webp);
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/pintura.jpg);
     }
 
     .img-2 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/revestimentos.webp);
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/revestimento.jpg);
     }
 
     .img-3 {
@@ -93,11 +93,11 @@
     }
 
     .img-4 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/drywall.webp);
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/drywall2.jpg);
     }
 
     .img-5 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/alvenaria.webp);
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/drywall.jpg);
     }
 
     @include responsive($tablet) {

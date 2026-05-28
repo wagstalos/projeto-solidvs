@@ -9,7 +9,7 @@
 
     &__img {
         width: 40%;
-        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url("../img/meet.webp");
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/equipe.jpg");
         height: 530px;
         background-position: center;
         background-repeat: no-repeat;
@@ -53,6 +53,7 @@
 
             li {
                 margin-right: 24px;
+
                 h3 {
                     color: $brand-main;
                     font-size: 40px;
@@ -63,11 +64,13 @@
     }
 
     @include responsive($tablet) {
+
         &__img,
         &__text {
             width: 100%;
             margin-bottom: 40px;
         }
+
         .d-flex {
             flex-direction: column;
         }
@@ -78,6 +81,7 @@
             h2 {
                 font-size: 38px;
             }
+
             ul {
                 flex-wrap: wrap;
                 align-items: center;
@@ -85,6 +89,7 @@
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: space-evenly;
+
                 li {
                     margin-right: 0;
                     margin-top: 16px;

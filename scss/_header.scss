@@ -35,10 +35,10 @@ header {
 
     &.scroll {
         background-color: $brand-black;
-        -webkit-box-shadow: 5px 1px 15px 2px rgba(0, 0, 0, 0.26);
+        -webkit-box-shadow: 5px 1px 15px 2px rgba(0, 0, 0, 1);
         box-shadow: 5px 1px 15px 2px rgba(0, 0, 0, 0.26);
         backdrop-filter: blur(20px);
-        background: rgba(25, 25, 25, .6);
+        background: rgba(25, 25, 25, 1);
     }
 
 
